@@ -8,9 +8,13 @@ Tipe data adalah sebuah pengelompokan atau pengklasifikasian data berdasarkan je
 1) Tipe data primitif
    Adalah tipe data yang sudah ditentukan oleh sistem, perbedaannya terletak pada jumlah bit yang dialokasikan untuk setiap bit pada tipe data primitif tergantung pada sistem operasinya.
    Contoh tipe data primitif adalah:
+   
    a) Int : 1, 2, 3, 4, dsb
+   
    b) Float : 2.1, 3.4, 4.3, dsb
+   
    c) Char : A, B, C, dsb
+   
    d) Boolean : true, false
    
 3) Tipe data Abstrak
@@ -19,8 +23,11 @@ Tipe data adalah sebuah pengelompokan atau pengklasifikasian data berdasarkan je
 4) Tipe data Koleksi 
    Adalah tipe data yang digunakan untuk mengelompokkan dan menyimpan beberapa nilai atau objek secara bersamaan. Tipe data ini dapat menyimpan, mengelola, dan mengakses sejumlah besar data dengan cara yang terstruktur.
    Beberapa tipe data koleksi yang umum digunakan:
+   
    a) Array : struktur data statis yang menyimpan elemen-elemen dengan tipe data yang sama.
+   
    b) Vector : Standard Template Library (STL) jika di dalam C/C++ memiliki bentuk std::vector.
+   
    c) Map : mirip dengan array namun dengan index yang memungkinkan, dapat berupa tipe data selain integer.
 
 ## Guided 
@@ -250,6 +257,7 @@ Perbedaan antara array dan map:
 Tipe data adalah sebuah pengelompokan atau pengklasifikasian data berdasarkan jenis data tersebut. Tipe data yang akan dipelajari, yaitu: Tipe data primitif, Tipe data abstrak, dan Tipe data koleksi
 
 ## Referensi
-[1] Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts, problems, Interview Questions. CareerMonk Publications.
-[2] TylerMSFT. (n.d.). Collections (C++/CX). diakses dari https://learn.microsoft.com/en-us/cpp/cppcx/collections-c-cx?view=msvc-170
+Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts, problems, Interview Questions. CareerMonk Publications.
+
+TylerMSFT. (n.d.). Collections (C++/CX). diakses dari https://learn.microsoft.com/en-us/cpp/cppcx/collections-c-cx?view=msvc-170
 
