@@ -19,170 +19,237 @@ Tipe data adalah sebuah pengelompokan atau pengklasifikasian data berdasarkan je
 4) Tipe data Koleksi 
    Adalah tipe data yang digunakan untuk mengelompokkan dan menyimpan beberapa nilai atau objek secara bersamaan. Tipe data ini dapat menyimpan, mengelola, dan mengakses sejumlah besar data dengan cara yang terstruktur.
    Beberapa tipe data koleksi yang umum digunakan:
-   a) Array : struktur data statis yang menyimpan elemen-elemen                   dengan tipe data yang sama.
-   b) Vector : Standard Template Library (STL) jika di dalam C/C++                 memiliki bentuk std::vector.
-   c) Map : mirip dengan array namun dengan index yang memungkinkan,            dapat berupa tipe data selain integer.
+   a) Array : struktur data statis yang menyimpan elemen-elemen dengan tipe data yang sama.
+   b) Vector : Standard Template Library (STL) jika di dalam C/C++ memiliki bentuk std::vector.
+   c) Map : mirip dengan array namun dengan index yang memungkinkan, dapat berupa tipe data selain integer.
 
 ## Guided 
 
 ### 1. Tipe Data Primitif
 
 ```C++
-#include<iostream>
+#include <iostream>
 using namespace std;
-///Main program
+// main program
 int main()
 {
     char op;
     float num1, num2;
-    //it allows user to enter operator i.e. +,- ,*, /
-    cout<<"Masukan Operator: " << endl;
-    cin >> op;
-    cout << "Masukkan Angka 1 dan 2: ";
+    cout<<"Masukkan Operator: ";
+    cin>>op;
+    cout<<"\nMasukkan Bilangan ke-1 dan ke-2: ";
     cin>>num1>>num2;
 
     switch(op)
     {
-    case'+':
-        cout<<num1+num2;
+    case '+':
+        cout<< num1+num2;
         break;
-    case'_':
-        cout<<num1 - num2;
-        break;
+    case '-':
+        cout<< num1-num2;
     case '*':
-        cout<<num1 * num2;
-        break;
+        cout<< num1*num2;
     case '/':
-        cout<<num1 / num2;
-        break;
+        cout<< num1/num2;
     default:
-        cout<<"Eror!operator is not correct";
-    
-    }//switch statement ends
-    return 0;
+        cout<< "Error! operator is not correct";
+    }
+return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 
 ### 2. Tipe Data Abstrak
 
 ```C++
 #include <stdio.h>
+#include <string.h>
 
 //Struct
 struct Mahasiswa
 {
-    const char *name;
-    const char *address;
+    char name[50];
+    char address[100];
     int age;
 };
-
 int main()
 {
-    // menggunakan struct
-    struct Mahasiswa mhs1, mhs2;
-    
-    // mengisi nilai ke struct
-    mhs1.name = "Dian";
-    mhs1.address = "Mataram";
-    mhs1.age = 22;
-    mhs2.name = "Bambang";
-    mhs2.address = "Surabaya";
-    mhs2.age = 23;
+// menggunakan struct
+struct Mahasiswa mhs1, mhs2;
+//mengisi nilai ke struct
+strcpy(mhs1.name, "Dian");
+strcpy(mhs1.address, "Mataram");
+mhs1.age = 22;
+strcpy(mhs2.name, "Bambang");
+strcpy(mhs2.address, "Surabaya");
+mhs2.age = 23;
 
-    // mencetak isi struct
-    printf("## Mahasiswa 1 ##\n");
-    printf("Nama: %s\n", mhs1.name);
-    printf("Alamat: %s\n", mhs1.address);
-    printf("Umur: %d\n", mhs1.age);
-    printf("## Mahasiswa 2 ##\n");
-    printf("Nama: %s\n", mhs2.name);
-    printf("Alamat: %s\n", mhs2.address);
-    printf("Umur: %d\n", mhs2.age);
-    return 0;
+// mencetak isi struct
+printf("## Mahasiswa 1 ##\n");
+printf("Nama: %s\n", mhs1.name);
+printf("Alamat: %s\n", mhs1.address);
+printf("Umur: %d\n", mhs1.age);
+printf("\n");
+printf("## Mahasiswa 2 ##\n");
+printf("Nama: %s\n", mhs2.name);
+printf("Alamat: %s\n", mhs2.address);
+printf("Umur: %d\n", mhs2.age);
+return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 
 ### 3. Tipe Data Koleksi
 
 ```C++
 #include <iostream>
+#include <array>
 using namespace std;
 
-int main()
-{
-    //deklarasi dan inisialisasi array
+int main() {
+    // Deklarasi dan inisialisasi array
     int nilai[5];
     nilai[0] = 23;
     nilai[1] = 50;
     nilai[2] = 34;
     nilai[3] = 78;
     nilai[4] = 90;
-    //mencetak array
-    cout << "Isi array pertama :" << nilai[0] << endl;
-    cout << "Isi array kedua :" << nilai[1] << endl;
-    cout << "Isi array ketiga :" << nilai[2] << endl;
-    cout << "Isi array keempat :" << nilai[3] << endl;
-    cout << "Isi array kelima :" << nilai[4] << endl;
+
+    // Mencetak array dengan tab
+    cout << "Isi array pertama : " << nilai[0] << endl;
+    cout << "Isi array kedua   : " << nilai[1] << endl;
+    cout << "Isi array ketiga  : " << nilai[2] << endl;
+    cout << "Isi array keempat : " << nilai[3] << endl;
+    cout << "Isi array kelima  : " << nilai[4] << endl;
+
     return 0;
 }
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 
 ## Unguided 
 
-### 1. [Soal]
+### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
 
 ```C++
-#include <iostream>
+#include<iostream>
 using namespace std;
 
+// Fungsi untuk menambahkan dua bilangan
+int tambah(int a, int b) {
+    return a + b;
+}
+
+// Fungsi untuk mengalikan dua bilangan
+int kali(int a, int b) {
+    return a * b;
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    int x = 5;
+    int y = 10;
+
+    cout << "Hasil penjumlahan x dan y adalah: " << tambah(x, y) << endl;
+    cout << "Hasil perkalian x dan y adalah: " << kali(x, y) << endl;
+
     return 0;
 }
 ```
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Program ini mendefinisikan dua fungsi, tambah dan kali, yang masing-masing melakukan penjumlahan dan perkalian dua bilangan. Fungsi-fungsi ini menerima dua argumen bertipe int (integer) dan mengembalikan hasilnya yang juga bertipe int. Di dalam fungsi main, kita mendefinisikan dua variabel x dan y yang bertipe int, lalu kita memanggil fungsi tambah dan kali dengan x dan y sebagai argumen.
 
-### 2. [Soal]
+Dari program ini, dapat diambil kesimpulan bahwa tipe data primitif seperti int sangat penting dalam pemrograman karena dapat digunakan untuk menyimpan dan memanipulasi data. 
+
+### 2.  Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!
 
 ```C++
-#include <iostream>
+#include<iostream>
 using namespace std;
 
+// Mendefinisikan struct
+struct Mahasiswa {
+    string nama;
+    int umur;
+    double ipk;
+};
+
+// Mendefinisikan class
+class Mobil {
+private:
+    string merk;
+    int tahun;
+public:
+    Mobil(string m, int t) {
+        merk = m;
+        tahun = t;
+    }
+    void tampilkan() {
+        cout << "Merk mobil : " << merk << ", Tahun: " << tahun << endl;
+    }
+};
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    // Membuat objek dari struct
+    Mahasiswa mhs1;
+    mhs1.nama = "Budi";
+    mhs1.umur = 20;
+    mhs1.ipk = 3.5;
+    cout << "Nama: " << mhs1.nama << ", Umur: " << mhs1.umur << ", IPK: " << mhs1.ipk << endl;
+
+    // Membuat objek dari class
+    Mobil mobil1("Toyota", 2010);
+    mobil1.tampilkan();
+
     return 0;
 }
 ```
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Class dan struct adalah dua fitur penting dalam pemrograman berorientasi objek (OOP) dalam C++. Keduanya digunakan untuk mendefinisikan tipe data baru yang dapat mencakup data dan fungsi.
 
-### 3. [Soal]
+Class adalah tipe data yang digunakan untuk mendefinisikan objek dengan menyatukan variabel dan fungsi dalam satu unit. Class biasanya digunakan untuk mendefinisikan objek yang lebih kompleks yang memerlukan metode dan properti. Dalam class, anggota data dan fungsi secara default bersifat private.
+
+Struct mirip dengan class, tetapi secara tradisional digunakan untuk mengelompokkan variabel yang terkait erat. Dalam struct, anggota data dan fungsi secara default bersifat public.
+Dari program ini, kita dapat mengambil kesimpulan bahwa class dan struct dalam C++ sangat penting untuk mendefinisikan tipe data baru yang dapat mencakup data dan fungsi, dan mereka memainkan peran penting dalam pemrograman berorientasi objek.
+
+### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map!
 
 ```C++
-#include <iostream>
+#include<iostream>
+#include<map>
 using namespace std;
 
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    // Membuat map baru
+    map<string, int> umur;
+
+    // Menambahkan pasangan kunci-nilai ke dalam map
+    umur["Ali"] = 20;
+    umur["Budi"] = 25;
+    umur["Citra"] = 22;
+
+    // Mengakses nilai dalam map menggunakan kunci
+    cout << "Umur Ali: " << umur["Ali"] << endl;
+    cout << "Umur Budi: " << umur["Budi"] << endl;
+    cout << "Umur Citra: " << umur["Citra"] << endl;
+
     return 0;
 }
 ```
 #### Output:
 ![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Program ini mendefinisikan sebuah map yang memetakan string ke int.
+Perbedaan antara array dan map:
 
+- *Array* adalah kumpulan elemen dengan tipe data yang sama yang diindeks dengan angka. Indeks array dimulai dari 0 dan berlanjut hingga n-1, di mana n adalah jumlah elemen dalam array. Array harus memiliki ukuran tetap yang ditentukan saat inisialisasi.
+
+- *Map* adalah struktur data yang menyimpan pasangan kunci-nilai. Kunci dalam map bisa berupa tipe data apa pun, dan tidak harus berupa angka. Map juga tidak memiliki ukuran tetap.
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1] Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts, problems, Interview Questions. CareerMonk Publications.
+[2] TylerMSFT. (n.d.). Collections (C++/CX). diakses dari https://learn.microsoft.com/en-us/cpp/cppcx/collections-c-cx?view=msvc-170
+
