@@ -237,7 +237,7 @@ int main() {
 }
 ```
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![Screenshot 2024-03-20 090102](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/935ed45e-06de-442e-b17d-8ddf840b1ae9)
 
 Program ini mendefinisikan sebuah map yang memetakan string ke int.
 Perbedaan antara array dan map:
@@ -247,7 +247,7 @@ Perbedaan antara array dan map:
 - *Map* adalah struktur data yang menyimpan pasangan kunci-nilai. Kunci dalam map bisa berupa tipe data apa pun, dan tidak harus berupa angka. Map juga tidak memiliki ukuran tetap.
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Tipe data adalah sebuah pengelompokan atau pengklasifikasian data berdasarkan jenis data tersebut. Tipe data yang akan dipelajari, yaitu: Tipe data primitif, Tipe data abstrak, dan Tipe data koleksi
 
 ## Referensi
 [1] Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts, problems, Interview Questions. CareerMonk Publications.
