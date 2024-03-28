@@ -215,7 +215,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-03-20 090021](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/e0b89c4a-ab3e-4bf9-90e8-5edce35db24f)
+![Screenshot 2024-03-28 104235](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/6e53ee3b-2b3d-4456-af45-1a5c1c7b1fbe)
 
 Program ini meminta pengguna untuk memasukkan ukuran array tiga dimensi dan elemen-elemennya, lalu mencetak elemen-elemen tersebut.
 
