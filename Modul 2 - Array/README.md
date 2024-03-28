@@ -115,7 +115,7 @@ int main() {
 ## Unguided 
 
 ### 1. Buatlah program untuk menampilkan Output seperti berikut dengan data yang diinputkan oleh user!
-
+![Screenshot 2024-03-28 111759](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/aaf11a9e-f0ef-4d68-bcc3-d260cd58af52)
 
 ```C++
 #include <iostream>
