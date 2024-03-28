@@ -255,7 +255,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-03-20 090102](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/935ed45e-06de-442e-b17d-8ddf840b1ae9)
+![Screenshot 2024-03-28 104635](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/df65acec-a379-48b9-b938-e613c8d0b352)
 
 Program ini akan meminta pengguna untuk memasukkan 10 angka. Setelah itu, program akan mencetak nilai maksimum, minimum, dan rata-rata dari angka-angka tersebut.
 
