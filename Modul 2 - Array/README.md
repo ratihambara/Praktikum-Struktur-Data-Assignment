@@ -147,7 +147,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-03-20 085913](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/7d23e55a-7911-4ac0-be7b-39aec8721b58)
+![Screenshot 2024-03-28 103359](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/bf60541c-cd08-4881-8cc4-6f3898d22a58)
 
 Program ini meminta pengguna untuk memasukkan 10 angka, dan kemudian langsung memisahkan angka tersebut menjadi angka genap dan ganjil.
 
