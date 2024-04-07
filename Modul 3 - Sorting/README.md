@@ -266,7 +266,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-03-20 090102](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/935ed45e-06de-442e-b17d-8ddf840b1ae9)
+![Screenshot 2024-04-07 120044](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/af7ce52d-3fd8-4d9e-be1f-5c9a8bf5640d)
 
 Program ini menggunakan fungsi sort dari library <algorithm> untuk mengurutkan karakter-karakter. Hasilnya akan dicetak dalam urutan menaik (ascending) dan menurun (descending).
 
@@ -274,7 +274,7 @@ Program ini menggunakan fungsi sort dari library <algorithm> untuk mengurutkan k
 Algoritma sorting adalah algoritma yang digunakan untuk meletakkan kumpulan elemen data dalam urutan tertentu, berdasarkan beberapa kunci tertentu pada tiap-tiap elemen. Pengurutan bisa secara ascending atau descending. Macam-macam algoritma sorting adalah insertion sort, bubble sort, dan selection sort.
 
 ## Referensi
-Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts, problems, Interview Questions. CareerMonk Publications.
+[Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts, problems, Interview Questions. CareerMonk Publications.](https://www.geeksforgeeks.org/selection-sort/)
 
-TylerMSFT. (n.d.). Collections (C++/CX). diakses dari https://learn.microsoft.com/en-us/cpp/cppcx/collections-c-cx?view=msvc-170
+[TylerMSFT. (n.d.). Collections (C++/CX). diakses dari https://learn.microsoft.com/en-us/cpp/cppcx/collections-c-cx?view=msvc-170](https://www.programiz.com/cpp-programming/examples)
 
