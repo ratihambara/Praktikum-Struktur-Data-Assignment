@@ -176,7 +176,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-04-07 123620](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/8419d4a8-7d3b-46dc-9377-618ab6b43c37)
+![Screenshot 2024-04-07 120235](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/698a566d-a2f4-431a-8a5d-4e5358f5ffcf)
 
 Program ini menggambarkan algoritma selection sort. Fungsi selectionSort mengurutkan array (arr) dengan mencari elemen terkecil dan menukarnya dengan elemen pertama pada bagian yang belum terurut. Fungsi printArray hanya mencetak isi array yang sudah terurut.
 Contoh Hasil Keluaran: Jika menjalankan kode ini dengan array input {3.8, 2.9, 3.3, 4.0, 2.4}, maka hasilnya akan mengurutkan array tersebut secara menaik, menjadi 2.4    2.9    3.3    3.8    4.0
