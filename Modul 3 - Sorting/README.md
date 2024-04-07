@@ -176,7 +176,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-03-20 085913](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/7d23e55a-7911-4ac0-be7b-39aec8721b58)
+![Screenshot 2024-04-07 123620](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/8419d4a8-7d3b-46dc-9377-618ab6b43c37)
 
 Program ini menggambarkan algoritma selection sort. Fungsi selectionSort mengurutkan array (arr) dengan mencari elemen terkecil dan menukarnya dengan elemen pertama pada bagian yang belum terurut. Fungsi printArray hanya mencetak isi array yang sudah terurut.
 Contoh Hasil Keluaran: Jika menjalankan kode ini dengan array input {3.8, 2.9, 3.3, 4.0, 2.4}, maka hasilnya akan mengurutkan array tersebut secara menaik, menjadi 2.4    2.9    3.3    3.8    4.0
@@ -228,6 +228,7 @@ Fungsi bubbleSort membandingkan setiap pasangan nama dan menukarnya jika urutann
 Contoh Hasil Keluaran: Jika menjalankan kode ini dengan array nama warga yang diberikan, yaitu {siti, situ, sana, ana, ani, caca, cici, dida, dodo, dadi}, maka hasilnya akan mengurutkan nama-nama warga berdasarkan alfabet: ana ani caca cici dadi dida dodo sana siti situ.
 
 ### 3. Buatlah program yang meminta user menginputkan suatu bilangan n dan meminta user untuk menginputkan sejumlah n karakter. Kemudian program akan melakukan sorting secara menaik (ascending) dan menurun (descending)!
+![Screenshot 2024-04-07 123620](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/8419d4a8-7d3b-46dc-9377-618ab6b43c37)
 
 ```C++
 #include <iostream>
