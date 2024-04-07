@@ -1,131 +1,131 @@
 # Praktikum-Struktur-Data-Assignment
-# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
+# <h1 align="center">Laporan Praktikum Modul Sorting</h1>
 <p align="center">Ratih Ambara Sukma Kurnilia</p>
 
 ## Dasar Teori
 
-Tipe data adalah sebuah pengelompokan atau pengklasifikasian data berdasarkan jenis data tersebut. Tipe data yang akan dipelajari, yaitu:
-1) Tipe data primitif
-   Adalah tipe data yang sudah ditentukan oleh sistem, perbedaannya terletak pada jumlah bit yang dialokasikan untuk setiap bit pada tipe data primitif tergantung pada sistem operasinya.
-   Contoh tipe data primitif adalah:
+Algoritma sorting adalah algoritma yang digunakan untuk meletakkan kumpulan elemen data dalam urutan tertentu, berdasarkan beberapa kunci tertentu pada tiap-tiap elemen. Algoritma sorting dibagi menjadi dua jenis, yaitu:
+1) Ascending
+   Adalah pengurutan dari terkecil hingga terbesar 
+   Contoh: a, b, c, d, e
+
+2) Descending
+   Adalah pengurutan dari terbesar hingga terkecil
+   Contoh: e, d, c, b, a
+
+Macam-macam algoritma sorting:
+1) Insertion Sort
+   Cara mengurutkannya adalah dicek satu persatu mulai dari yang kedua sampai dengan yang terakhir. Apabila ditemukan data yang lebih kecil dari data sebelumnya, maka data tersebut disisipkan pada posisi yang sesuai.
    
-   a) Int : 1, 2, 3, 4, dsb
-   
-   b) Float : 2.1, 3.4, 4.3, dsb
-   
-   c) Char : A, B, C, dsb
-   
-   d) Boolean : true, false
-   
-3) Tipe data Abstrak
-   Merupakan tipe data yang dibentuk oleh programer itu sendiri. Pada tipe data abstrak bisa berisi banyak tipe data, jadi nilainya bisa lebih dari satu dan beragam tipe data.
-   
-4) Tipe data Koleksi 
-   Adalah tipe data yang digunakan untuk mengelompokkan dan menyimpan beberapa nilai atau objek secara bersamaan. Tipe data ini dapat menyimpan, mengelola, dan mengakses sejumlah besar data dengan cara yang terstruktur.
-   Beberapa tipe data koleksi yang umum digunakan:
-   
-   a) Array : struktur data statis yang menyimpan elemen-elemen dengan tipe data yang sama.
-   
-   b) Vector : Standard Template Library (STL) jika di dalam C/C++ memiliki bentuk std::vector.
-   
-   c) Map : mirip dengan array namun dengan index yang memungkinkan, dapat berupa tipe data selain integer.
+2) Bubble Sort
+   Cara mengurutkannya adalah membandingkan elemen yang sekarang dengan elemen yang 
+berikutnya. Jika elemen sekarang lebih besar dari elemen berikutnya, maka kedua elemen ditukar.
+
+3) Selection Sort
+   Cara mengurutkannya adalah dengan membandingkan elemen sekarang dengan elemen yang 
+berikutnya sampai terakhir. Jika ditemukan elemen paling kecil, kemudian ditukar dengan elemen sekarang.
 
 ## Guided 
 
-### 1. Tipe Data Primitif
+### 1. Mengurutkan secara ascending untuk data numerik bertipe double menggunakan Algoritma Bubble Sort
 
 ```C++
 #include <iostream>
 using namespace std;
-// main program
-int main()
-{
-    char op;
-    float num1, num2;
-    cout<<"Masukkan Operator: ";
-    cin>>op;
-    cout<<"\nMasukkan Bilangan ke-1 dan ke-2: ";
-    cin>>num1>>num2;
 
-    switch(op)
-    {
-    case '+':
-        cout<< num1+num2;
-        break;
-    case '-':
-        cout<< num1-num2;
-    case '*':
-        cout<< num1*num2;
-    case '/':
-        cout<< num1/num2;
-    default:
-        cout<< "Error! operator is not correct";
+// Fungsi untuk mengurutkan array secara ascending menggunakan algoritma bubble sort
+void bubble_sort(double arr[], int length){
+    bool not_sorted = true;
+    int j=0;
+    double tmp;
+
+    // Membandingkan dan menukar elemen
+    while (not_sorted){
+        // Menukar elemen
+        not_sorted = false;
+        j++;
+     
+        for (int i = 0; i < length - j; i++){
+            if (arr[i] > arr[i + 1]) {
+                tmp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = tmp;
+                not_sorted = true;
+            }//end of if
+        }//end of for loop
+    }//end of while loop
+}//end of bubble_sort
+
+// Fungsi untuk mencetak isi array
+void print_array(double a[], int length) {
+    for(int i=0; i<length; i++) {
+        cout << a[i] << "\t";
     }
-return 0;
+    cout << endl;
 }
-```
-
-### 2. Tipe Data Abstrak
-
-```C++
-#include <stdio.h>
-#include <string.h>
-
-//Struct
-struct Mahasiswa
-{
-    char name[50];
-    char address[100];
-    int age;
-};
-int main()
-{
-// menggunakan struct
-struct Mahasiswa mhs1, mhs2;
-//mengisi nilai ke struct
-strcpy(mhs1.name, "Dian");
-strcpy(mhs1.address, "Mataram");
-mhs1.age = 22;
-strcpy(mhs2.name, "Bambang");
-strcpy(mhs2.address, "Surabaya");
-mhs2.age = 23;
-
-// mencetak isi struct
-printf("## Mahasiswa 1 ##\n");
-printf("Nama: %s\n", mhs1.name);
-printf("Alamat: %s\n", mhs1.address);
-printf("Umur: %d\n", mhs1.age);
-printf("\n");
-printf("## Mahasiswa 2 ##\n");
-printf("Nama: %s\n", mhs2.name);
-printf("Alamat: %s\n", mhs2.address);
-printf("Umur: %d\n", mhs2.age);
-return 0;
-}
-```
-
-### 3. Tipe Data Koleksi
-
-```C++
-#include <iostream>
-#include <array>
-using namespace std;
 
 int main() {
-    // Deklarasi dan inisialisasi array
-    int nilai[5];
-    nilai[0] = 23;
-    nilai[1] = 50;
-    nilai[2] = 34;
-    nilai[3] = 78;
-    nilai[4] = 90;
+    int length = 5;
+    double a[] = {22.1, 15.3, 8.2, 33.21, 99,99};
 
-    // Mencetak array dengan tab
-    cout << "Isi array pertama : " << nilai[0] << endl;
-    cout << "Isi array kedua   : " << nilai[1] << endl;
-    cout << "Isi array ketiga  : " << nilai[2] << endl;
-    cout << "Isi array keempat : " << nilai[3] << endl;
-    cout << "Isi array kelima  : " << nilai[4] << endl;
+    cout << "Urutan bilangan sebelum sorting: " << endl;
+    print_array(a, length);
+
+    // Memanggil fungsi bubble_sort_ascending untuk mengurutkan array secara ascending
+    bubble_sort(a, length);
+
+    cout << "\nUrutan bilangan setelah sorting: " << endl;
+    print_array(a, length);
+
+    return 0;
+}
+```
+
+### 2. Mengurutkan karakter secara descending (dari terbesar hingga terkecil) menggunakan Algoritma Insertion Sort
+
+```C++
+#include <iostream>
+using namespace std;
+
+// Fungsi untuk mengurutkan array secara descending menggunakan algoritma insertion sort
+void insertion_sort(char arr[], int length) {
+    int i, j;
+    char tmp;
+
+    for (i = 1; i < length; i++) {
+        j = i;
+
+        // Membandingkan dan menukar elemen
+        while (j > 0 && arr[j - 1] < arr[j]) {
+            // Menukar elemen
+            tmp = arr[j];
+            arr[j] = arr[j - 1];
+            arr[j - 1] = tmp;
+            j--;
+        }//end of while loop
+    }//end of for loop
+}
+
+// Fungsi untuk mencetak isi array
+void print_array(char a[], int length) {
+    for(int i=0; i<length; i++) {
+        cout << a[i] << "\t";
+    }
+    cout << endl;
+}
+
+int main() {
+    int length = 6;
+    char a[length] = {'c', 'f', 'a', 'z', 'd', 'p'};
+
+    cout << "Urutan karakter sebelum sorting: " << endl;
+    print_array(a, length);
+
+    // Memanggil fungsi insertion_sort_descending untuk mengurutkan array secara descending
+    insertion_sort(a, length);
+
+    cout << "\nUrutan karakter setelah sorting: " << endl;
+    print_array(a, length);
 
     return 0;
 }
@@ -133,28 +133,44 @@ int main() {
 
 ## Unguided 
 
-### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
+### 1. Kelas S1 IF 2016 G memiliki 5 mahasiswa. Pada akhir semester mereka menerima lembar Indeks Prestasi Semester (IPS), masing-masing mahasiswa tersebut memiliki IPS sebagai berikut: {3.8, 2.9, 3.3, 4.0, 2.4}. Buatlah program untuk mengurutkan IPS mahasiswa tersebut dari yang terbesar hingga terkecil dengan menggunakan algoritma Selection Sort! 
 
 ```C++
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-// Fungsi untuk menambahkan dua bilangan
-int tambah(int a, int b) {
-    return a + b;
+void selectionSort(double arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int pos_min = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] > arr[pos_min]) {
+                pos_min = j;
+            }
+        }
+        if (pos_min != i) {
+            swap(arr[i], arr[pos_min]);
+        }
+    }
 }
 
-// Fungsi untuk mengalikan dua bilangan
-int kali(int a, int b) {
-    return a * b;
+void printIPS(double arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
 }
 
 int main() {
-    int x = 5;
-    int y = 10;
+    double ips[] = {3.8, 2.9, 3.3, 4.0, 2.4};
+    int n = sizeof(ips) / sizeof(ips[0]);
 
-    cout << "Hasil penjumlahan x dan y adalah: " << tambah(x, y) << endl;
-    cout << "Hasil perkalian x dan y adalah: " << kali(x, y) << endl;
+    cout << "IPS sebelum diurutkan: ";
+    printIPS(ips, n);
+
+    selectionSort(ips, n);
+
+    cout << "IPS setelah diurutkan (dari terbesar hingga terkecil): ";
+    printIPS(ips, n);
 
     return 0;
 }
@@ -162,49 +178,44 @@ int main() {
 #### Output:
 ![Screenshot 2024-03-20 085913](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/7d23e55a-7911-4ac0-be7b-39aec8721b58)
 
-Program ini mendefinisikan dua fungsi, tambah dan kali, yang masing-masing melakukan penjumlahan dan perkalian dua bilangan. Fungsi-fungsi ini menerima dua argumen bertipe int (integer) dan mengembalikan hasilnya yang juga bertipe int. Di dalam fungsi main, kita mendefinisikan dua variabel x dan y yang bertipe int, lalu kita memanggil fungsi tambah dan kali dengan x dan y sebagai argumen.
+Program ini menggambarkan algoritma selection sort. Fungsi selectionSort mengurutkan array (arr) dengan mencari elemen terkecil dan menukarnya dengan elemen pertama pada bagian yang belum terurut. Fungsi printArray hanya mencetak isi array yang sudah terurut.
+Contoh Hasil Keluaran: Jika menjalankan kode ini dengan array input {3.8, 2.9, 3.3, 4.0, 2.4}, maka hasilnya akan mengurutkan array tersebut secara menaik, menjadi 2.4    2.9    3.3    3.8    4.0
 
-Dari program ini, dapat diambil kesimpulan bahwa tipe data primitif seperti int sangat penting dalam pemrograman karena dapat digunakan untuk menyimpan dan memanipulasi data. 
-
-### 2.  Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!
+### 2.  Pak RT memiliki 10 warga dengan nama: siti, situ, sana, ana, ani, caca, cici, dida, dodo, dan dadi. Supaya mudah dalam melakukan pencarian, Pak RT akan mengurutkan nama-nama tersebut sesuai dengan alfabet. Buatlah program untuk membantu Pak RT dengan menggunakan algoritma Bubble Sort!
 
 ```C++
-#include<iostream>
+#include <iostream>
+#include <string>
 using namespace std;
 
-// Mendefinisikan struct
-struct Mahasiswa {
-    string nama;
-    int umur;
-    double ipk;
-};
+void bubbleSort(string names[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (names[j] > names[j + 1]) {
+                swap(names[j], names[j + 1]);
+            }
+        }
+    }
+}
 
-// Mendefinisikan class
-class Mobil {
-private:
-    string merk;
-    int tahun;
-public:
-    Mobil(string m, int t) {
-        merk = m;
-        tahun = t;
+void printNames(string names[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << names[i] << " ";
     }
-    void tampilkan() {
-        cout << "Merk mobil : " << merk << ", Tahun: " << tahun << endl;
-    }
-};
+    cout << endl;
+}
 
 int main() {
-    // Membuat objek dari struct
-    Mahasiswa mhs1;
-    mhs1.nama = "Budi";
-    mhs1.umur = 20;
-    mhs1.ipk = 3.5;
-    cout << "Nama: " << mhs1.nama << ", Umur: " << mhs1.umur << ", IPK: " << mhs1.ipk << endl;
+    const int numWarga = 10;
+    string wargaNames[numWarga] = {"siti", "situ", "sana", "ana", "ani", "caca", "cici", "dida", "dodo", "dadi"};
 
-    // Membuat objek dari class
-    Mobil mobil1("Toyota", 2010);
-    mobil1.tampilkan();
+    cout << "Nama-nama warga sebelum diurutkan: ";
+    printNames(wargaNames, numWarga);
+
+    bubbleSort(wargaNames, numWarga);
+
+    cout << "Nama-nama warga setelah diurutkan (berdasarkan alfabet): ";
+    printNames(wargaNames, numWarga);
 
     return 0;
 }
@@ -212,33 +223,43 @@ int main() {
 #### Output:
 ![Screenshot 2024-03-20 090021](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/e0b89c4a-ab3e-4bf9-90e8-5edce35db24f)
 
-Class dan struct adalah dua fitur penting dalam pemrograman berorientasi objek (OOP) dalam C++. Keduanya digunakan untuk mendefinisikan tipe data baru yang dapat mencakup data dan fungsi.
+Program ini mengimplementasikan algoritma bubble sort dalam bahasa C++ dan mengurutkan nama-nama warga berdasarkan alfabet dengan cara membandingkan dan menukar elemen-elemen yang tidak terurut.
+Fungsi bubbleSort membandingkan setiap pasangan nama dan menukarnya jika urutannya salah. Fungsi printNames hanya mencetak nama-nama yang sudah terurut.
+Contoh Hasil Keluaran: Jika menjalankan kode ini dengan array nama warga yang diberikan, yaitu {siti, situ, sana, ana, ani, caca, cici, dida, dodo, dadi}, maka hasilnya akan mengurutkan nama-nama warga berdasarkan alfabet: ana ani caca cici dadi dida dodo sana siti situ.
 
-Class adalah tipe data yang digunakan untuk mendefinisikan objek dengan menyatukan variabel dan fungsi dalam satu unit. Class biasanya digunakan untuk mendefinisikan objek yang lebih kompleks yang memerlukan metode dan properti. Dalam class, anggota data dan fungsi secara default bersifat private.
-
-Struct mirip dengan class, tetapi secara tradisional digunakan untuk mengelompokkan variabel yang terkait erat. Dalam struct, anggota data dan fungsi secara default bersifat public.
-Dari program ini, kita dapat mengambil kesimpulan bahwa class dan struct dalam C++ sangat penting untuk mendefinisikan tipe data baru yang dapat mencakup data dan fungsi, dan mereka memainkan peran penting dalam pemrograman berorientasi objek.
-
-### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map!
+### 3. Buatlah program yang meminta user menginputkan suatu bilangan n dan meminta user untuk menginputkan sejumlah n karakter. Kemudian program akan melakukan sorting secara menaik (ascending) dan menurun (descending)!
 
 ```C++
-#include<iostream>
-#include<map>
+#include <iostream>
+#include <algorithm>
 using namespace std;
 
 int main() {
-    // Membuat map baru
-    map<string, int> umur;
+    int n;
+    cout << "Masukkan bilangan bulat n: ";
+    cin >> n;
 
-    // Menambahkan pasangan kunci-nilai ke dalam map
-    umur["Ali"] = 20;
-    umur["Budi"] = 25;
-    umur["Citra"] = 22;
+    char karakter[n];
+    cout << "Masukkan " << n << " karakter: ";
+    for (int i = 0; i < n; ++i) {
+        cin >> karakter[i];
+    }
 
-    // Mengakses nilai dalam map menggunakan kunci
-    cout << "Umur Ali: " << umur["Ali"] << endl;
-    cout << "Umur Budi: " << umur["Budi"] << endl;
-    cout << "Umur Citra: " << umur["Citra"] << endl;
+    // Mengurutkan karakter secara menaik (ascending)
+    sort(karakter, karakter + n);
+
+    cout << "\nUrutan karakter setelah ascending sort: ";
+    for (int i = 0; i < n; ++i) {
+        cout << karakter[i] << " ";
+    }
+
+    // Mengurutkan karakter secara menurun (descending)
+    sort(karakter, karakter + n, greater<char>());
+
+    cout << "\nUrutan karakter setelah descending sort: ";
+    for (int i = 0; i < n; ++i) {
+        cout << karakter[i] << " ";
+    }
 
     return 0;
 }
@@ -246,15 +267,10 @@ int main() {
 #### Output:
 ![Screenshot 2024-03-20 090102](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/935ed45e-06de-442e-b17d-8ddf840b1ae9)
 
-Program ini mendefinisikan sebuah map yang memetakan string ke int.
-Perbedaan antara array dan map:
-
-- *Array* adalah kumpulan elemen dengan tipe data yang sama yang diindeks dengan angka. Indeks array dimulai dari 0 dan berlanjut hingga n-1, di mana n adalah jumlah elemen dalam array. Array harus memiliki ukuran tetap yang ditentukan saat inisialisasi.
-
-- *Map* adalah struktur data yang menyimpan pasangan kunci-nilai. Kunci dalam map bisa berupa tipe data apa pun, dan tidak harus berupa angka. Map juga tidak memiliki ukuran tetap.
+Program ini menggunakan fungsi sort dari library <algorithm> untuk mengurutkan karakter-karakter. Hasilnya akan dicetak dalam urutan menaik (ascending) dan menurun (descending).
 
 ## Kesimpulan
-Tipe data adalah sebuah pengelompokan atau pengklasifikasian data berdasarkan jenis data tersebut. Tipe data yang akan dipelajari, yaitu: Tipe data primitif, Tipe data abstrak, dan Tipe data koleksi
+Algoritma sorting adalah algoritma yang digunakan untuk meletakkan kumpulan elemen data dalam urutan tertentu, berdasarkan beberapa kunci tertentu pada tiap-tiap elemen. Pengurutan bisa secara ascending atau descending. Macam-macam algoritma sorting adalah insertion sort, bubble sort, dan selection sort.
 
 ## Referensi
 Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts, problems, Interview Questions. CareerMonk Publications.
