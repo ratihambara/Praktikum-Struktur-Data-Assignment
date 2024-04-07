@@ -221,7 +221,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-03-20 090021](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/e0b89c4a-ab3e-4bf9-90e8-5edce35db24f)
+![Screenshot 2024-04-07 120150](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/dc074ad6-8570-418e-a4c2-e354a031f137)
 
 Program ini mengimplementasikan algoritma bubble sort dalam bahasa C++ dan mengurutkan nama-nama warga berdasarkan alfabet dengan cara membandingkan dan menukar elemen-elemen yang tidak terurut.
 Fungsi bubbleSort membandingkan setiap pasangan nama dan menukarnya jika urutannya salah. Fungsi printNames hanya mencetak nama-nama yang sudah terurut.
