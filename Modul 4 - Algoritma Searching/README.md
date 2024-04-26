@@ -181,7 +181,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-03-20 085913](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/7d23e55a-7911-4ac0-be7b-39aec8721b58)
+![Screenshot 2024-04-26 093954](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/a3a0accf-504d-4776-a925-4e59a74f592d)
 
 Program ini akan meminta user untuk memasukkan kalimat dan huruf yang dicari. Kemudian, program akan mengurutkan huruf-huruf dalam kalimat dan mencari huruf yang dicari menggunakan Binary Search. Jika huruf tersebut ditemukan, program akan mencetak pesan bahwa huruf tersebut ditemukan. Jika tidak, program akan mencetak pesan bahwa huruf tersebut tidak ditemukan.
 
