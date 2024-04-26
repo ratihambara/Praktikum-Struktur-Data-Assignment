@@ -251,7 +251,7 @@ int main(){
 }
 ```
 #### Output:
-![Screenshot 2024-03-20 090021](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/e0b89c4a-ab3e-4bf9-90e8-5edce35db24f)
+![Screenshot 2024-04-26 105728](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/df6bd4d8-813d-4627-976d-c28002973985)
 
 Kode ini mengubah variabel struct buku1 dan buku2 menjadi array buku berukuran 5. Fungsi tampilkanBuku digunakan untuk menampilkan informasi buku berdasarkan indeks dalam array.
 
