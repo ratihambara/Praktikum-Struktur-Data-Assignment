@@ -78,6 +78,7 @@ return 0;
 ```
 
 ### 2. Buatlah sebuah struktur dengan skema seperti dibawah, isi dengan nilai kemudian jalankan.
+![Screenshot 2024-04-26 110921](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/ad20cd66-d889-49ac-af8a-1206f26c8769)
 
 ```C++
 #include <iostream>
