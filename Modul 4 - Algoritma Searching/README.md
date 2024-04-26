@@ -214,7 +214,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-03-20 090021](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/e0b89c4a-ab3e-4bf9-90e8-5edce35db24f)
+![Screenshot 2024-04-26 094131](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/a1a8ac09-aef8-4d1c-8630-6c5b46f4e1ae)
 
 Program ini akan meminta user untuk memasukkan kalimat. Kemudian, program akan menghitung jumlah huruf vokal dalam kalimat tersebut dan mencetak jumlahnya. Huruf vokal yang dihitung adalah ‘a’, ‘e’, ‘i’, ‘o’, dan ‘u’, baik dalam bentuk huruf kecil maupun huruf besar.
 
