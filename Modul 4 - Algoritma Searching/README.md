@@ -246,7 +246,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-03-20 090102](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/935ed45e-06de-442e-b17d-8ddf840b1ae9)
+![Screenshot 2024-04-26 094507](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/bc17df3c-fef6-4c27-b20c-0c55a7916c24)
 
 Program ini akan mencari dan menghitung jumlah angka 4 dalam array data. Jika angka 4 ditemukan, count akan bertambah. Kemudian, program akan mencetak jumlah angka 4 dalam array.
 
