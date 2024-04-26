@@ -203,7 +203,7 @@ int main(){
 }
 ```
 #### Output:
-![Screenshot 2024-03-20 085913](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/7d23e55a-7911-4ac0-be7b-39aec8721b58)
+![Screenshot 2024-04-26 105533](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/dad85963-58eb-4491-a52f-8a8f8f9dd9fe)
 
 Kode ini mengisi setiap item dalam struct Buku dengan array berukuran 5 dan menampilkan informasi buku tersebut.
 
