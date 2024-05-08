@@ -576,7 +576,7 @@ Toko Skincare Purwokerto
 8. Exit
 Pada menu 7, tampilan akhirnya akan menjadi seperti dibawah 
 ini :
-
+![Screenshot 2024-05-08 145009](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/15ef9458-a05c-458e-8fbc-aa4ac709aad3)
 
 ```C++
 #include <iostream>
