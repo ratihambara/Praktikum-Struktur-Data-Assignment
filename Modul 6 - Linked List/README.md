@@ -556,6 +556,7 @@ int main() {
 ![Screenshot 2024-05-08 141422](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/61aab4b2-9449-4593-add6-3248f0d86f6b)
 
 ### 2. Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama produk dan harga.
+![Screenshot 2024-05-08 144955](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/18b76680-c1c3-4d26-b710-068ac0124513)
 
 Case:
 1. Tambahkan produk Azarine dengan harga 65000 diantara 
