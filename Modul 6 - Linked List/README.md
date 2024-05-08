@@ -545,7 +545,15 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-04-26 105533](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/dad85963-58eb-4491-a52f-8a8f8f9dd9fe)
+![Screenshot 2024-05-08 141031](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/fb43b706-609d-4328-84e5-2531c37414b6)
+![Screenshot 2024-05-08 141118](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/59a33b5c-6387-402a-967e-eaa82de31d34)
+![Screenshot 2024-05-08 141149](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/2d10d344-6022-4ca9-9096-2c469d07056a)
+![Screenshot 2024-05-08 141211](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/a93e7940-97fe-473f-bfa6-aa8a32ea553b)
+![Screenshot 2024-05-08 141245](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/17539370-15ff-4c9e-9886-08f3c6137f45)
+![Screenshot 2024-05-08 141309](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/c437d5a4-84c2-4b57-8058-a0f3dc6c065c)
+![Screenshot 2024-05-08 141333](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/b03dff18-b496-4750-b700-e86dab1e74d7)
+![Screenshot 2024-05-08 141401](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/0127b6b5-b27e-450d-95ec-2c90c76d120a)
+![Screenshot 2024-05-08 141422](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/61aab4b2-9449-4593-add6-3248f0d86f6b)
 
 ### 2. Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama produk dan harga.
 
