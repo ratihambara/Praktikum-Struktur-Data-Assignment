@@ -411,7 +411,7 @@ int main() {
 ### 1. Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut:
 
 a. Masukkan data sesuai urutan berikut. (Gunakan insert depan, belakang atau tengah). Data pertama yang dimasukkan adalah nama dan usia anda.
-
+![Screenshot 2024-05-08 144930](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/99c246ac-edb3-4244-97ff-ea38641c62b8)
 
 b. Hapus data Akechi
 
