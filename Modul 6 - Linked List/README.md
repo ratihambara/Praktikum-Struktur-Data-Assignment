@@ -798,7 +798,9 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-04-26 105728](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/df6bd4d8-813d-4627-976d-c28002973985)
+![Screenshot 2024-05-08 141929](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/0c3d57a9-5d92-4556-8a16-809a263bc70d)
+![Screenshot 2024-05-08 141950](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/f69d337b-df53-4a00-8adc-e7da3e7d5ccb)
+![Screenshot 2024-05-08 142008](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/6fa75054-37c8-4dab-998c-b36932f6db12)
 
 ## Kesimpulan
 Linked List terbagi menjadi 2 yaitu Single Linked List dan Double Linked List, setiap jenis Linked List tersebut memiliki kelebihan dan kekurangannya masing-masing.
