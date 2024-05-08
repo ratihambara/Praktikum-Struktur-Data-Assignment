@@ -555,6 +555,7 @@ Somethinc dan Skintific
 2. Hapus produk wardah
 3. Update produk Hanasui menjadi Cleora dengan harga 55.000
 4. Tampilkan menu seperti dibawah ini
+
 Toko Skincare Purwokerto
 1. Tambah Data
 2. Hapus Data
