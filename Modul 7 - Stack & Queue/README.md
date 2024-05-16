@@ -365,7 +365,9 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-04-26 105728](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/df6bd4d8-813d-4627-976d-c28002973985)
+![Screenshot 2024-05-16 204122](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/f199651f-dac3-40bb-b194-d71f510642b4)
+![Screenshot 2024-05-16 204144](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/43bfacdb-cdd9-4c45-864d-4f8a42f51b52)
+![Screenshot 2024-05-16 204200](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/4776dd9c-b359-4757-85a4-3cd3123c863c)
 
 ## Kesimpulan
 Stack adalah struktur data sederhana yang digunakan untuk menyimpan data (mirip dengan Linked Lists). Metode dalam Stack disebut Last in First out (LIFO). Sedangkan Queue adalah struktur data yang digunakan untuk menyimpan data dengan metode FIFO (First-In First-Out). Queue mirip dengan konsep antrian pada kehidupan sehari-hari.
