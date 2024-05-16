@@ -258,7 +258,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-04-26 105533](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/dad85963-58eb-4491-a52f-8a8f8f9dd9fe)
+![Screenshot 2024-05-16 203742](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/0075134b-ef4d-44d3-a6f0-57a74ef3875e)
 
 Cara kerja program ini adalah sebagai berikut:
 Program ini pertama-tama membaca kalimat yang dimasukkan oleh pengguna. Kemudian, program ini memasukkan setiap karakter dari kalimat tersebut ke dalam stack. Setelah itu, program ini membandingkan setiap karakter dari kalimat tersebut dengan karakter teratas dari stack. Jika karakter tersebut tidak sama dengan karakter teratas dari stack, maka program ini akan mengembalikan false, yang berarti kalimat tersebut bukan palindrom. Jika semua karakter dari kalimat tersebut sama dengan karakter teratas dari stack, maka program ini akan mengembalikan true, yang berarti kalimat tersebut adalah palindrom.
