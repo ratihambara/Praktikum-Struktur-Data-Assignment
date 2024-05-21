@@ -267,7 +267,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-04-26 105533](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/dad85963-58eb-4491-a52f-8a8f8f9dd9fe)
+![Screenshot 2024-05-21 095545](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/21183d48-af94-4416-9479-03d1a86f6463) 
 
 Kode ini meminta user untuk memasukkan jumlah elemen dan nilai dari setiap elemen yang ingin dimasukkan ke dalam heap. User juga diminta untuk memasukkan indeks dan prioritas baru untuk operasi changePriority, serta indeks elemen yang ingin dihapus untuk operasi remove.
 
