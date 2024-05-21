@@ -1,265 +1,379 @@
 # Praktikum-Struktur-Data-Assignment
-# <h1 align="center">Laporan Praktikum Modul Struct</h1>
+# <h1 align="center">Laporan Praktikum Modul Stack & Queue</h1>
 <p align="center">Ratih Ambara Sukma Kurnilia</p>
 
 ## Dasar Teori
 
-Struct merupakan tipe data bentukan yang terdiri dari beberapa tipe data standar maupun tipe data bentukan lainnya yang telah didefinisikan sebelumnya. Keyword yang digunakan untuk membuat sebuah struktur yakni struct(). Terdapat banyak format penulisan struct diantaranya :
+# A. Stack
+Stack adalah struktur data sederhana yang digunakan untuk menyimpan data (mirip dengan Linked Lists). Sebuah tumpukan atau stack adalah daftar terurut di mana penyisipan dan penghapusan dilakukan di satu ujung (atas). Elemen terakhir yang dimasukkan adalah yang pertama dihapus. Oleh karena itu, disebut Last in First out (LIFO). 
+Operasi pada stack memiliki fungsi dasar, beberapa diantaranya yaitu Push (memasukkan) : Menambahkan elemen ke dalam tumpukan pada posisi paling atas atau ujung, dan Pop (mengeluarkan) : Menghapus elemen dari posisi paling atas atau ujung tumpukan.
 
-1) struct { 
-         string namaDepan; 
-         string namaBelakang;
-         int usia;
-         char jenis_kelamin;
-   }namaVariabelStrukA, namaVariabelStrukB;
-   
-2) struct namaTipe{
-         string namaDepan;
-         string namaTengah;
-         string namaBelakang;
-   }; struct namaTipe namaVariabelStrukA, namaVariabelStrukB;
-   
-3) typedef struct {
-         string namaDepan;
-         string namaTengah;
-         string namaBelakang;
-   }namaTipe;
-   namaTipe namaVariabelStrukA, namaVariabelStrukB;
+# B. Queue
+Queue adalah struktur data yang digunakan untuk menyimpan data dengan metode FIFO (First-In First-Out). Queue mirip dengan konsep antrian pada kehidupan sehari-hari, dimana konsumen yang datang lebih dulu akan dilayani terlebih dahulu. Struktur data queue terdiri dari dua pointer yaitu front dan rear. Front/head adalah pointer ke elemen pertama dalam queue dan rear/tail/back adalah pointer ke elemen terakhir dalam queue.
+Operasi pada queue memiliki fungsi dasar, beberapa diantaranya yaitu enqueue() : menambahkan data ke dalam queue dan dequeue() : mengeluarkan data dari queue.
+
+
+Perbedaan antara stack dan queue terdapat pada aturan penambahan dan penghapusan elemen. Pada stack, operasi penambahan dan penghapusan elemen dilakukan di satu ujung. Elemen yang terakhir diinputkan akan berada paling atas sehingga pada operasi penghapusan, elemen teratas tersebut akan dihapus paling awal, sifat demikian dikenal dengan LIFO. Sedangkan pada Queue, operasi tersebut dilakukan ditempat berbeda (melalui salah satu ujung) karena perubahan data selalu mengacu pada Head, maka hanya ada 1 jenis insert maupun delete, sifat demikian dikenal dengan FIFO (First-In First-Out).
 
 ## Guided 
 
-### 1. Buatlah sebuah struktur dengan nama buku yang berisi judul_buku, pengarang, penerbit, tebal_halaman, harga_buku. Isi dengan nilai kemudian tampilkan.
+### 1. Stack
 
 ```C++
 #include <iostream>
 using namespace std;
 
-struct Buku {
-    string judul_buku;
-    string pengarang;
-    string penerbit;
-    int tebal_buku;
-    double harga_buku;
-}; Buku buku1, buku2;
+string arrayBuku[5];
+int maksimal = 5, top = 0;
 
- int main(){
+bool isFull() {
+    return (top == maksimal);
+}
 
-buku1.judul_buku = "Algoritma Pemrograman";
-buku1.pengarang = "Yunus Prademon";
-buku1.penerbit = "Gramedia Pustaka Utama";
-buku1.tebal_buku = 300;
-buku1.harga_buku = 120000;
+bool isEmpty() {
+    return (top == 0);
+}
 
-//Menampilkan data
-cout << "Informasi Buku" << endl;
-cout << "Judul : " << buku1.judul_buku << endl;
-cout << "Pengarang : " << buku1.pengarang << endl;
-cout << "Penerbit : " << buku1.penerbit << endl;
-cout << "Tebal Halaman : " << buku1.tebal_buku << endl;
-cout << "Harga Buku : " << buku1.harga_buku << endl;
+void pushArrayBuku(string data) {
+    if (isFull()) {
+        cout << "Data telah penuh" << endl;
+    } else {
+        arrayBuku[top] = data;
+        top++;
+    }
+}
 
+void popArrayBuku() {
+    if (isEmpty()) {
+        cout << "Tidak ada data yang dihapus" << endl;
+    } else {
+        arrayBuku[top - 1] = "";
+        top--;
+    }
+}
 
-buku2.judul_buku = "Kamil Forever";
-buku2.pengarang = "Ikhwan Dedianto";
-buku2.penerbit = "Gramedia Tangerang";
-buku2.tebal_buku = 200;
-buku2.harga_buku = 100000;
+void peekArrayBuku(int posisi) {
+    if (isEmpty()) {
+        cout << "Tidak ada data yang bisa dilihat" << endl;
+    } else {
+        int index = top;
+        for (int i = 1; i <= posisi; i++) {
+            index--;
+        }
+        cout << "Posisi ke " << posisi << " adalah " << arrayBuku[index] << endl;
+    }
+}
 
-//Menampilkan data
-cout << "Buku Favorit" << endl;
-cout << "Judul : " << buku2.judul_buku << endl;
-cout << "Pengarang : " << buku2.pengarang << endl;
-cout << "Penerbit : " << buku2.penerbit << endl;
-cout << "Tebal Halaman : " << buku2.tebal_buku << endl;
-cout << "Harga Buku : " << buku2.harga_buku << endl;
+int countStack() {
+    return top;
+}
 
-return 0;
+void changeArrayBuku(int posisi, string data) {
+    if (posisi > top) {
+        cout << "Posisi melebihi data yang ada" << endl;
+    } else {
+        int index = top;
+        for (int i = 1; i <= posisi; i++) {
+            index--;
+        }
+        arrayBuku[index] = data;
+    }
+}
+
+void destroyArraybuku() {
+    for (int i = top; i >= 0; i--) {
+        arrayBuku[i] = "";
+    }
+    top = 0;
+}
+
+void cetakArrayBuku() {
+    if (isEmpty()) {
+        cout << "Tidak ada data yang dicetak" << endl;
+    } else {
+        for (int i = top - 1; i >= 0; i--) {
+            cout << arrayBuku[i] << endl;
+        }
+    }
+}
+
+int main() {
+    pushArrayBuku("Kalkulus");
+    pushArrayBuku("Struktur Data");
+    pushArrayBuku("Matematika Diskrit");
+    pushArrayBuku("Dasar Multimedia");
+    pushArrayBuku("Inggris");
+
+    cetakArrayBuku();
+    cout << "\n";
+    cout << "Apakah data stack penuh? " << isFull() << endl;
+    cout << "Apakah data stack kosong? " << isEmpty() << endl;
+    peekArrayBuku(2);
+    popArrayBuku();
+    cout << "Banyaknya data = " << countStack() << endl;
+    changeArrayBuku(2, "Bahasa Jerman");
+    cout << endl;
+    cetakArrayBuku();
+    cout << "\n";
+    destroyArraybuku();
+    cout << "Jumlah data setelah dihapus: " << top << endl;
+    cetakArrayBuku();
+
+    return 0;
 }
 ```
 
-### 2. Buatlah sebuah struktur dengan skema seperti dibawah, isi dengan nilai kemudian jalankan.
-![Screenshot 2024-04-26 110921](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/ad20cd66-d889-49ac-af8a-1206f26c8769)
+### 2. Queue
 
 ```C++
 #include <iostream>
 using namespace std;
 
-struct Hewan{
-    string nama_hewan;
-    string jenis_kelamin;
-    string kembangbiak;
-    string pernapasan;
-    string tempat_hidup;
-    bool karnivora;
-}; 
-Hewan info_hewan;
+const int maksimalQueue = 5; // Maksimal antrian
+int front = 0; // Penanda depan antrian
+int back = 0; // Penanda belakang antrian
+string queueTeller[5]; // Array untuk menyimpan antrian
 
-struct Hewan_drt{
-    Hewan info_hewan;
-    int jumlah_kaki;
-    bool apakah_menyusui;
-    string suara;
-};
-Hewan_drt hewan1;
+bool isFull() { // Pengecekan antrian penuh atau tidak
+    if (back == maksimalQueue) {
+        return true; // =1
+    } else {
+        return false;
+    }
+}
 
-struct Hewan_lt{
-    Hewan info_hewan;
-    string bentuk_sirip;
-    string pertahanan_diri;
-};
-Hewan_lt hewan2;
+bool isEmpty() { // Antrian kosong atau tidak
+    if (back == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+void enqueueAntrian(string data) { // Menambahkan antrian
+    if (isFull()) {
+        cout << "Antrian penuh" << endl;
+    } else {
+        if (isEmpty()) { // Jika antrian kosong
+            queueTeller[0] = data;
+            front++;
+            back++;
+        } else { // Jika antrian ada isi
+            queueTeller[back] = data;
+            back++;
+        }
+    }
+}
+
+void dequeueAntrian() { // Mengurangi antrian
+    if (isEmpty()) {
+        cout << "Antrian kosong" << endl;
+    } else {
+        for (int i = 0; i < back; i++) {
+            queueTeller[i] = queueTeller[i + 1];
+        }
+        back--;
+    }
+}
+
+int countQueue() { // Menghitung jumlah antrian
+    return back;
+}
+
+void clearQueue() { // Menghapus semua antrian
+    if (isEmpty()) {
+        cout << "Antrian kosong" << endl;
+    } else {
+        for (int i = 0; i < back; i++) {
+            queueTeller[i] = "";
+        }
+        back = 0;
+        front = 0;
+    }
+}
+
+void viewQueue() { // Melihat isi antrian
+    cout << "Data antrian teller:" << endl;
+    for (int i = 0; i < maksimalQueue; i++) {
+        if (queueTeller[i] != "") {
+            cout << i + 1 << ". " << queueTeller[i] << endl;
+        } else {
+            cout << i + 1 << ". (kosong)" << endl;
+        }
+    }
+}
 
 int main() {
-    //Hewan Darat
-    hewan1.info_hewan.nama_hewan = "Kucing";
-    hewan1.info_hewan.jenis_kelamin = "Jantan";
-    hewan1.info_hewan.kembangbiak = "Melahirkan";
-    hewan1.info_hewan.pernapasan = "Paru-paru";
-    hewan1.info_hewan.tempat_hidup = "Daratan";
-    hewan1.info_hewan.karnivora = true;
-    hewan1.jumlah_kaki = 4;
-    hewan1.apakah_menyusui = true;
-    hewan1.suara = "Meow";
-
-    //Hewan Laut
-    hewan2.info_hewan.nama_hewan = "Penyu";
-    hewan2.info_hewan.jenis_kelamin = "Betina";
-    hewan2.info_hewan.kembangbiak = "Bertelur";
-    hewan2.info_hewan.pernapasan = "Paru-paru dan insang";
-    hewan2.info_hewan.tempat_hidup = "Lautan";
-    hewan2.info_hewan.karnivora = false;
-    hewan2.bentuk_sirip = "Sirip dan ekor";
-    hewan2.pertahanan_diri = "Cangkang yang kuat";
-
-    //Menampilkan data
-    cout << "\tHewan Darat" << endl;
-    cout << "Nama Hewan : " << hewan1.info_hewan.nama_hewan << endl;
-    cout << "Jenis Kelamin : " << hewan1.info_hewan.jenis_kelamin << endl;
-    cout << "Kembangbiak : " << hewan1.info_hewan.kembangbiak << endl;
-    cout << "Alat Pernapasan : " << hewan1.info_hewan.pernapasan << endl;
-    cout << "Tempat Hidup : " << hewan1.info_hewan.tempat_hidup << endl;
-    cout << "Apakah Karnivora? " << hewan1.info_hewan.karnivora << endl;
-    cout << "Jumlah Kaki : " << hewan1.jumlah_kaki << endl;
-    cout << "Apakah Menyusui? " << hewan1.apakah_menyusui << endl;
-    cout << "Suara : " << hewan1.suara << endl;
-
-    cout << "\tHewan Laut" << endl;
-    cout << "Nama Hewan : " << hewan2.info_hewan.nama_hewan << endl;
-    cout << "Jenis Kelamin : " << hewan2.info_hewan.jenis_kelamin << endl;
-    cout << "Kembangbiak : " << hewan2.info_hewan.kembangbiak << endl;
-    cout << "Alat Pernapasan : " << hewan2.info_hewan.pernapasan << endl;
-    cout << "Tempat Hidup : " << hewan2.info_hewan.tempat_hidup << endl;
-    cout << "Apakah Karnivora? " << hewan2.info_hewan.karnivora << endl;
-    cout << "Bentuk Sirip : " << hewan2.bentuk_sirip << endl;
-    cout << "Pertahanan Diri : " << hewan2.pertahanan_diri << endl;
-
-    return 0; 
+    enqueueAntrian("Andi");
+    enqueueAntrian("Maya");
+    viewQueue();
+    cout << "Jumlah antrian = " << countQueue() << endl;
+    dequeueAntrian();
+    viewQueue();
+    cout << "Jumlah antrian = " << countQueue() << endl;
+    clearQueue();
+    viewQueue();
+    cout << "Jumlah antrian = " << countQueue() << endl;
+    return 0;
 }
 ```
 
 ## Unguided 
 
-### 1. Modifikasi tugas guided pertama, sehingga setiap item yang terdapat pada struct buku berupa array yang berukuran 5, isi dengan data kemudian tampilkan.
+### 1. Buatlah program untuk menentukan apakah kalimat tersebut yang diinputkadalam program stack adalah palindrom/tidak. Palindrom kalimat yang dibaca dari depan dan belakang sama. Jelaskan bagaimana cara kerja programnya.
 
 ```C++
 #include <iostream>
-using namespace std;
+#include <stack>
+#include <string>
 
-struct Buku {
-    string judul_buku[5];
-    string pengarang[5];
-    string penerbit[5];
-    int tebal_buku[5];
-    double harga_buku[5];
-}; 
-
-Buku buku;
-
-void tampilkanBuku(int index) {
-    cout << "Informasi Buku" << endl;
-    cout << "Judul : " << buku.judul_buku[index] << endl;
-    cout << "Pengarang : " << buku.pengarang[index] << endl;
-    cout << "Penerbit : " << buku.penerbit[index] << endl;
-    cout << "Tebal Halaman : " << buku.tebal_buku[index] << endl;
-    cout << "Harga Buku : " << buku.harga_buku[index] << endl;
-}
-
-int main(){
-    // Isi data buku
-    for (int i = 0; i < 5; i++) {
-        buku.judul_buku[i] = "Judul Buku " + to_string(i+1);
-        buku.pengarang[i] = "Pengarang " + to_string(i+1);
-        buku.penerbit[i] = "Penerbit " + to_string(i+1);
-        buku.tebal_buku[i] = 100 + (i * 20);
-        buku.harga_buku[i] = 50000 + (i * 10000);
+bool cekPalindrom(const std::string& kalimat) {
+    std::stack<char> s;
+    for (char c : kalimat) {
+        s.push(c);
     }
 
-    // Tampilkan data buku
-    for (int i = 0; i < 5; i++) {
-        tampilkanBuku(i);
+    for (char c : kalimat) {
+        if (c != s.top()) {
+            return false;
+        }
+        s.pop();
+    }
+
+    return true;
+}
+
+int main() {
+    std::string kalimat;
+    std::cout << "Masukkan kalimat: ";
+    std::cin >> kalimat;
+
+    if (cekPalindrom(kalimat)) {
+        std::cout << "Kalimat tersebut adalah palindrom\n";
+    } else {
+        std::cout << "Kalimat tersebut adalah bukan palindrom\n";
     }
 
     return 0;
 }
 ```
 #### Output:
-![Screenshot 2024-04-26 105533](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/dad85963-58eb-4491-a52f-8a8f8f9dd9fe)
+![Screenshot 2024-05-16 203742](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/0075134b-ef4d-44d3-a6f0-57a74ef3875e)
 
-Kode ini mengisi setiap item dalam struct Buku dengan array berukuran 5 dan menampilkan informasi buku tersebut.
+Cara kerja program ini adalah sebagai berikut:
+Program ini pertama-tama membaca kalimat yang dimasukkan oleh pengguna. Kemudian, program ini memasukkan setiap karakter dari kalimat tersebut ke dalam stack. Setelah itu, program ini membandingkan setiap karakter dari kalimat tersebut dengan karakter teratas dari stack. Jika karakter tersebut tidak sama dengan karakter teratas dari stack, maka program ini akan mengembalikan false, yang berarti kalimat tersebut bukan palindrom. Jika semua karakter dari kalimat tersebut sama dengan karakter teratas dari stack, maka program ini akan mengembalikan true, yang berarti kalimat tersebut adalah palindrom.
 
-### 2.   Apa yang terjadi jika deklarasi variabel struct yang dibuat pada tugas guided I, berjenis Array. Bagaimana cara mengisi data dan menampilkannya ?
+### 2.   Ubah guided queue diatas agar menjadi program inputan user dan program menu.
 
 ```C++
 #include <iostream>
 using namespace std;
 
-struct Buku {
-    string judul_buku;
-    string pengarang;
-    string penerbit;
-    int tebal_buku;
-    double harga_buku;
-}; 
+const int maksimalQueue = 5;
+int front = 0;
+int back = 0;
+string queueTeller[5];
 
-Buku buku[5];
-
-void tampilkanBuku(int index) {
-    cout << "Informasi Buku" << endl;
-    cout << "Judul : " << buku[index].judul_buku << endl;
-    cout << "Pengarang : " << buku[index].pengarang << endl;
-    cout << "Penerbit : " << buku[index].penerbit << endl;
-    cout << "Tebal Halaman : " << buku[index].tebal_buku << endl;
-    cout << "Harga Buku : " << buku[index].harga_buku << endl;
+bool isFull() {
+    return back == maksimalQueue;
 }
 
-int main(){
-    // Isi data buku
-    for (int i = 0; i < 5; i++) {
-        buku[i].judul_buku = "Judul Buku " + to_string(i+1);
-        buku[i].pengarang = "Pengarang " + to_string(i+1);
-        buku[i].penerbit = "Penerbit " + to_string(i+1);
-        buku[i].tebal_buku = 100 + (i * 20);
-        buku[i].harga_buku = 50000 + (i * 10000);
-    }
+bool isEmpty() {
+    return back == 0;
+}
 
-    // Tampilkan data buku
-    for (int i = 0; i < 5; i++) {
-        tampilkanBuku(i);
+void enqueueAntrian(string data) {
+    if (isFull()) {
+        cout << "Antrian penuh" << endl;
+    } else {
+        queueTeller[back] = data;
+        back++;
     }
+}
+
+void dequeueAntrian() {
+    if (isEmpty()) {
+        cout << "Antrian kosong" << endl;
+    } else {
+        for (int i = 0; i < back; i++) {
+            queueTeller[i] = queueTeller[i + 1];
+        }
+        back--;
+    }
+}
+
+void clearQueue() {
+    if (isEmpty()) {
+        cout << "Antrian kosong" << endl;
+    } else {
+        for (int i = 0; i < back; i++) {
+            queueTeller[i] = "";
+        }
+        back = 0;
+    }
+}
+
+void viewQueue() {
+    cout << "Data antrian teller:" << endl;
+    for (int i = 0; i < maksimalQueue; i++) {
+        if (queueTeller[i] != "") {
+            cout << i + 1 << ". " << queueTeller[i] << endl;
+        } else {
+            cout << i + 1 << ". (kosong)" << endl;
+        }
+    }
+}
+
+int main() {
+    int pilihan;
+    string data;
+
+    do {
+        cout << "\nMenu:\n";
+        cout << "1. Tambah antrian\n";
+        cout << "2. Kurangi antrian\n";
+        cout << "3. Lihat antrian\n";
+        cout << "4. Hapus semua antrian\n";
+        cout << "5. Keluar\n";
+        cout << "Masukkan pilihan: ";
+        cin >> pilihan;
+
+        switch (pilihan) {
+            case 1:
+                cout << "Masukkan nama: ";
+                cin >> data;
+                enqueueAntrian(data);
+                break;
+            case 2:
+                dequeueAntrian();
+                break;
+            case 3:
+                viewQueue();
+                break;
+            case 4:
+                clearQueue();
+                break;
+            case 5:
+                cout << "Terima kasih telah menggunakan program ini.\n";
+                break;
+            default:
+                cout << "Pilihan tidak valid. Silakan coba lagi.\n";
+        }
+    } while (pilihan != 5);
 
     return 0;
 }
 ```
 #### Output:
-![Screenshot 2024-04-26 105728](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/df6bd4d8-813d-4627-976d-c28002973985)
-
-Kode ini mengubah variabel struct buku1 dan buku2 menjadi array buku berukuran 5. Fungsi tampilkanBuku digunakan untuk menampilkan informasi buku berdasarkan indeks dalam array.
+![Screenshot 2024-05-16 204122](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/f199651f-dac3-40bb-b194-d71f510642b4)
+![Screenshot 2024-05-16 204144](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/43bfacdb-cdd9-4c45-864d-4f8a42f51b52)
+![Screenshot 2024-05-16 204200](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/4776dd9c-b359-4757-85a4-3cd3123c863c)
 
 ## Kesimpulan
-Struct merupakan tipe data bentukan yang terdiri dari beberapa tipe data standar maupun tipe data bentukan lainnya yang telah didefinisikan sebelumnya. Keyword yang digunakan untuk membuat sebuah struktur yakni struct().
+Stack adalah struktur data sederhana yang digunakan untuk menyimpan data (mirip dengan Linked Lists). Metode dalam Stack disebut Last in First out (LIFO). Sedangkan Queue adalah struktur data yang digunakan untuk menyimpan data dengan metode FIFO (First-In First-Out). Queue mirip dengan konsep antrian pada kehidupan sehari-hari.
 
 ## Referensi
-Sjukani, Moh. 2007. Struktur Data (Algoritma & Struktur Data 2) dengan C, C++. Jakarta : Penerbit Mitra Wacana Media.
+Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts, problems, Interview Questions. CareerMonk Publications.
 
 [TylerMSFT. (n.d.). Collections (C++/CX). diakses dari https://learn.microsoft.com/en-us/cpp/cppcx/collections-c-cx?view=msvc-170](https://copilot.microsoft.com/?FORM=undexpand&)
 
