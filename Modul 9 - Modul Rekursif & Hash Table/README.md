@@ -233,7 +233,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-04-26 105533](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/dad85963-58eb-4491-a52f-8a8f8f9dd9fe)
+![Screenshot 2024-05-30 111232](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/73dd7465-e5bf-485a-b434-c0adc2090d7b)
 
 Kode ini menggunakan fungsi hitungFactorial yang menerima inputan angka dan menghitung faktorialnya secara rekursif. Fungsi ini memanggil dirinya sendiri dengan mengurangi nilai input sebanyak satu setiap kali hingga mencapai angka 1.
 
@@ -268,7 +268,7 @@ int hitungFactorial(int input) {
 }
 ```
 #### Output:
-![Screenshot 2024-04-26 105728](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/df6bd4d8-813d-4627-976d-c28002973985)
+![Screenshot 2024-05-30 111430](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/52df9a37-3aaf-466e-a1a8-97bf11c5fc95)
 
 Kode ini menggunakan dua fungsi: main dan hitungFactorial. Fungsi hitungFactorial adalah fungsi rekursif yang menghitung faktorial dengan cara memanggil dirinya sendiri hingga mencapai angka 1. Fungsi ini akan mengalikan nilai input dengan hasil faktorial dari input dikurangi 1.
 
@@ -392,6 +392,7 @@ int main() {
 }
 ```
 #### Output:
+![Screenshot 2024-05-30 112254](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/135de8cf-a6c3-4d4a-bfc0-7c6f4ea168b9)
 
 Pada program di atas, kita menggunakan hash table dengan metode separate chaining untuk mengelola data mahasiswa berdasarkan NIM dan nilai. Fungsi insert, remove, dan searchByNilai digunakan untuk menambah, menghapus, dan mencari data berdasarkan NIM.
 
