@@ -242,7 +242,7 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-04-26 105533](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/dad85963-58eb-4491-a52f-8a8f8f9dd9fe)
+![Screenshot 2024-06-06 111246](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/b4f65e76-d72d-457e-b048-9f538cf42765)
 
 ### 2.   Modifikasi guided tree diatas dengan program menu menggunakan input data tree dari user dan tampilkan pada pre-order, inorder, dan post order!
 
@@ -354,7 +354,8 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot 2024-04-26 105728](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/df6bd4d8-813d-4627-976d-c28002973985)
+![Screenshot 2024-06-06 112537](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/3ea10ae6-d486-4a1a-b832-99d2906d80e2)
+![Screenshot 2024-06-06 112749](https://github.com/ratihambara/Praktikum-Struktur-Data-Assignment/assets/161399790/4628d803-e730-4784-be5f-55db15b5cb02)
 
 ## Kesimpulan
 Graf atau graph adalah struktur data yang digunakan untuk merepresentasikan hubungan antara objek dalam bentuk node dan sambungan antara node tersebut dalam bentuk sisi. Tree atau Pohon adalah struktur data yang sangat umum dan kuat yang menyerupai nyata pohon. 
